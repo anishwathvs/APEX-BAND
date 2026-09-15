@@ -97,7 +97,7 @@ Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `HealthPulse_Clinical_Summary_${new Date().toISOString().slice(0,10)}.txt`;
+    link.download = `APEX_BAND_Clinical_Summary_${new Date().toISOString().slice(0,10)}.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

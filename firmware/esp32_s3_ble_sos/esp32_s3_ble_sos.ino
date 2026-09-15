@@ -1,5 +1,5 @@
 /**
- * HealthPulseEDGE — ESP32-S3 Direct-SIM BLE Emergency Broadcaster Firmware
+ * APEX-BAND — ESP32-S3 Direct-SIM BLE Emergency Broadcaster Firmware
  * PS ID: 26181 (Qualcomm Inc. / SIH 2026)
  * 
  * Hardware Target: ESP32-S3 (or standard ESP32)
@@ -93,7 +93,7 @@ void setup() {
   digitalWrite(STATUS_LED_PIN, LOW);
 
   // Initialize BLE Stack
-  BLEDevice::init("HealthPulse_Wearable");
+  BLEDevice::init("APEX_BAND_Wearable");
   pServer = BLEDevice::createServer();
   pServer->setCallbacks(new SosServerCallbacks());
 

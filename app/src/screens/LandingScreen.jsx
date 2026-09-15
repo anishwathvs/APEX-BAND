@@ -767,7 +767,7 @@ export function LandingScreen({ onGetStarted, onLogin }) {
 
         <div style={{ textAlign: 'center' }}>
           <span className="text-caption" style={{ fontSize: '11px', color: '#6B7280' }}>
-            HealthPulseEDGE · SIH 2026 · Qualcomm PS 26181
+            APEX-BAND · SIH 2026 · Qualcomm PS 26181
           </span>
         </div>
       </section>

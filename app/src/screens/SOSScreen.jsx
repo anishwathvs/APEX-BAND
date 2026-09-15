@@ -217,13 +217,13 @@ export function SOSScreen({
     try {
       setBleConnection(prev => ({ ...prev, status: 'scanning' }));
       const device = await navigator.bluetooth.requestDevice({
-        filters: [{ namePrefix: 'HealthPulse' }],
+        filters: [{ namePrefix: 'APEX' }, { namePrefix: 'HealthPulse' }],
         optionalServices: ['19b10000-e8f2-537e-4f6c-d104768a1214']
       });
 
       setBleConnection({
         status: 'connected',
-        deviceName: device.name || 'HealthPulse_Wearable',
+        deviceName: device.name || 'APEX_BAND_Wearable',
         lastEvent: 'Paired & Listening'
       });
 
@@ -263,11 +263,11 @@ export function SOSScreen({
   const alertReason = isFallActive ? 'Fall Impact' : 'Manual SOS';
 
   const emergencyMessageContent = `🚨 EMERGENCY HEALTH ALERT (${alertReason} Detected)
-Patient: User (HealthPulse Companion)
+Patient: User (APEX-BAND Companion)
 Time: ${timeString}
 Location: ${geoLocation.coordsText}
 Vitals Snapshot: HR ${hrVal} BPM | SpO2 ${spo2Val}% | Motion SVM: ${telemetry.imu?.svm_total_g || 4.8}g
-Automated Edge-AI Alert via Direct-SIM HealthPulseEDGE.`;
+Automated Edge-AI Alert via Direct-SIM APEX-BAND.`;
 
   const handleCopyMessage = () => {
     if (navigator.clipboard) {

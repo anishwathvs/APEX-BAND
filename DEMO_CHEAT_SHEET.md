@@ -1,4 +1,4 @@
-# HealthPulseEDGE — 30-Second Demo Cheat Sheet
+# APEX-BAND — 30-Second Demo Cheat Sheet
 **Quick-Reference Guide for Presenters (Keep open backstage)**
 
 ---
@@ -15,7 +15,7 @@
 ---
 
 ### Key 10-Second Elevator Pitch:
-> *"HealthPulseEDGE is an on-device personal health companion designed for India's public health emergencies. It runs three compact neural models directly on edge hardware in under 0.3 milliseconds with zero cloud dependencies, ensuring total privacy and 100% offline functionality during disaster grid blackouts."*
+> *"APEX-BAND is an on-device personal health companion designed for India's public health emergencies. It runs three compact neural models directly on edge hardware in under 0.3 milliseconds with zero cloud dependencies, ensuring total privacy and 100% offline functionality during disaster grid blackouts."*
 
 ### Demo Screen Navigation Checklist:
 1. **Landing Screen:** Hero pulse animation $\rightarrow$ Scroll down to show 01-02-03 architecture steps $\rightarrow$ Click *"Get Started"*.

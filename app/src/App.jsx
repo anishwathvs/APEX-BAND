@@ -64,7 +64,7 @@ export function App() {
   const [currentScenario, setCurrentScenario] = useState('NORMAL');
   const [isFallActive, setIsFallActive] = useState(false);
   const [measuredLatency, setMeasuredLatency] = useState(0.28);
-  const [currentUser, setCurrentUser] = useState({ name: 'Demo Patient', email: 'demo@healthpulse.edge' });
+  const [currentUser, setCurrentUser] = useState({ name: 'Demo Patient', email: 'demo@apexband.edge' });
 
   // Onboarding Permission Modal state
   const [showPermissionModal, setShowPermissionModal] = useState(() => {
@@ -334,7 +334,7 @@ export function App() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div>
               <h1 className="text-display" style={{ fontSize: '20px', lineHeight: '26px' }}>
-                HealthPulse<span style={{ color: '#0E7C7B' }}>EDGE</span>
+                APEX<span style={{ color: '#0E7C7B' }}>-BAND</span>
               </h1>
               <p className="text-caption" style={{ color: '#6B7280', fontSize: '11px', marginTop: '1px' }}>
                 SIH 2026 · Qualcomm PS 26181
@@ -596,7 +596,7 @@ export function App() {
               </div>
 
               <p className="text-caption" style={{ fontSize: '12px', color: '#15181C', lineHeight: '17px' }}>
-                HealthPulseEDGE processes all health models locally. Please grant the following permissions for full emergency protection:
+                APEX-BAND processes all health models locally. Please grant the following permissions for full emergency protection:
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>

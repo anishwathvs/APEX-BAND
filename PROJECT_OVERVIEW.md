@@ -1,4 +1,4 @@
-# HealthPulseEDGE — Comprehensive Project Overview
+# APEX-BAND — Comprehensive Project Overview
 **Personal Health Companion for Public Health Resilience in India**  
 **Hackathon:** Smart India Hackathon (SIH) 2026 | **Problem Statement:** ID 26181 | **Sponsor:** Qualcomm Inc.  
 
@@ -14,8 +14,8 @@ India experiences recurring, severe public health emergencies driven by climate 
 
 Standard digital health and wearable solutions depend on continuous cloud streaming. When network towers fail or rural users lack cellular connectivity, conventional cloud-based health apps cease functioning entirely.
 
-### The Solution: HealthPulseEDGE
-**HealthPulseEDGE** is an edge-native, privacy-preserving personal health companion designed to run **100% on-device AI inference**. It continuously analyzes multi-sensor physiological metrics (Heart Rate, SpO2, Skin Temperature, 6-DOF IMU motion, Pulse Transit Time, and EEG sleep bands) alongside offline environmental datasets. It detects health anomalies, predicts falls, tracks thermal strain, and generates life-saving clinical advisories in real time without transmitting a single byte of personal health data to the cloud.
+### The Solution: APEX-BAND
+**APEX-BAND** is an edge-native, privacy-preserving personal health companion designed to run **100% on-device AI inference**. It continuously analyzes multi-sensor physiological metrics (Heart Rate, SpO2, Skin Temperature, 6-DOF IMU motion, Pulse Transit Time, and EEG sleep bands) alongside offline environmental datasets. It detects health anomalies, predicts falls, tracks thermal strain, and generates life-saving clinical advisories in real time without transmitting a single byte of personal health data to the cloud.
 
 ---
 

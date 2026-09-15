@@ -13,7 +13,7 @@ import {
 export function LoginScreen({ onLoginSuccess, onBackToLanding }) {
   const [mode, setMode] = useState('login'); // 'login' | 'signup'
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('demo.patient@healthpulse.edge');
+  const [email, setEmail] = useState('demo.patient@apexband.edge');
   const [password, setPassword] = useState('pass1234');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -59,7 +59,7 @@ export function LoginScreen({ onLoginSuccess, onBackToLanding }) {
             <Activity size={20} color="#FFFFFF" />
           </div>
           <h2 className="text-display" style={{ fontSize: '20px', lineHeight: '26px' }}>
-            HealthPulse<span style={{ color: '#0E7C7B' }}>EDGE</span>
+            APEX<span style={{ color: '#0E7C7B' }}>-BAND</span>
           </h2>
           <p className="text-caption" style={{ color: '#6B7280', fontSize: '12px' }}>
             Your health data stays on this device.
