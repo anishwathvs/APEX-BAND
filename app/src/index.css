@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Exact Design Tokens - Minimalist White, Clinical-Calm */
+  --bg-app: #FAFAF9;
+  --bg-surface: #FFFFFF;
+  --ink-primary: #15181C;
+  --ink-secondary: #6B7280;
+  --border-hairline: #E7E5E2;
+  
+  /* Brand Accent */
+  --brand-accent: #0E7C7B;
+  --brand-accent-subtle: rgba(14, 124, 123, 0.08);
+  --brand-accent-border: rgba(14, 124, 123, 0.25);
+  
+  /* Risk Severity Tokens (used strictly for 4px left-accent and badge text) */
+  --risk-normal: #1A9B5C;
+  --risk-normal-subtle: rgba(26, 155, 92, 0.08);
+  --risk-normal-border: rgba(26, 155, 92, 0.25);
+
+  --risk-moderate: #D98E04;
+  --risk-moderate-subtle: rgba(217, 142, 4, 0.08);
+  --risk-moderate-border: rgba(217, 142, 4, 0.25);
+
+  --risk-high: #E2622B;
+  --risk-high-subtle: rgba(226, 98, 43, 0.08);
+  --risk-high-border: rgba(226, 98, 43, 0.25);
+
+  --risk-critical: #C93A3A;
+  --risk-critical-subtle: rgba(201, 58, 58, 0.08);
+  --risk-critical-border: rgba(201, 58, 58, 0.25);
+
+  /* Fonts */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Card Shadow Token */
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: #ECEBE8;
+  color: var(--ink-primary);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Device Mockup Shell */
+.app-device-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-mobile-container {
+  width: 100%;
+  max-width: 390px;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--bg-app);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 440px) {
+  .app-mobile-container {
+    height: 844px;
+    max-height: 92vh;
+    border-radius: 40px;
+    border: 8px solid #E2E0DB;
+    box-shadow: 
+      0 0 0 1px #D6D3CD,
+      0 24px 48px -12px rgba(0, 0, 0, 0.18),
+      0 4px 12px rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* Typography Hierarchy */
+.text-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--ink-primary);
+  letter-spacing: -0.4px;
+}
+
+.text-section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--ink-primary);
+  letter-spacing: -0.2px;
+}
+
+.text-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--ink-primary);
+}
+
+.text-body-muted {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-secondary);
+}
+
+.text-caption {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ink-secondary);
+}
+
+.text-mono-hero {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  color: var(--ink-primary);
+}
+
+.text-mono-secondary {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--ink-primary);
+}
+
+.text-mono-caption {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ink-secondary);
+}
+
+/* Card System */
+.app-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 4px Left-Accent Bars for Risk & Disaster Alerts (Only place risk colors appear as bars) */
+.accent-bar-normal {
+  border-left: 4px solid var(--risk-normal) !important;
+}
+
+.accent-bar-moderate {
+  border-left: 4px solid var(--risk-moderate) !important;
+}
+
+.accent-bar-high {
+  border-left: 4px solid var(--risk-high) !important;
+}
+
+.accent-bar-critical {
+  border-left: 4px solid var(--risk-critical) !important;
+}
+
+/* Status Badges */
+.badge-clean {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.badge-normal {
+  background: var(--risk-normal-subtle);
+  color: var(--risk-normal);
+  border: 1px solid var(--risk-normal-border);
+}
+
+.badge-moderate {
+  background: var(--risk-moderate-subtle);
+  color: var(--risk-moderate);
+  border: 1px solid var(--risk-moderate-border);
+}
+
+.badge-high {
+  background: var(--risk-high-subtle);
+  color: var(--risk-high);
+  border: 1px solid var(--risk-high-border);
+}
+
+.badge-critical {
+  background: var(--risk-critical-subtle);
+  color: var(--risk-critical);
+  border: 1px solid var(--risk-critical-border);
+}
+
+/* Signature Element: Living Pulse Line */
+.living-pulse-container {
+  width: 100%;
+  height: 3px;
+  background: rgba(14, 124, 123, 0.12);
+  overflow: hidden;
+  position: relative;
+}
+
+.living-pulse-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 45%;
+  background: linear-gradient(90deg, transparent 0%, var(--brand-accent) 50%, transparent 100%);
+  animation: pulseTravel 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulseTravel {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(260%); }
+}
+
+/* Screen Scroll Container */
+.screen-content-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px 88px 20px; /* strictly 20px horizontal padding, safe-area bottom */
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* strictly 12px vertical card gap */
+  scrollbar-width: thin;
+  scrollbar-color: #D6D3CD transparent;
+}
+
+.screen-content-area::-webkit-scrollbar {
+  width: 3px;
+}
+.screen-content-area::-webkit-scrollbar-thumb {
+  background: #D6D3CD;
+  border-radius: 3px;
+}
+
+/* Fixed Bottom Navigation Bar */
+.app-bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-hairline);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 50;
+  padding: 0 8px;
+}
+
+.nav-tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: var(--ink-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+
+.nav-tab-btn.active {
+  color: var(--brand-accent);
+  font-weight: 600;
+}
+
+.nav-tab-btn.active .nav-tab-icon {
+  color: var(--brand-accent);
+  transform: translateY(-1px);
+}
+
+/* Segmented Control Component */
+.segmented-control {
+  display: flex;
+  background: #F0EFEA;
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid var(--border-hairline);
+}
+
+.segmented-control-btn {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-secondary);
+  background: none;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+
+.segmented-control-btn.active {
+  background: #FFFFFF;
+  color: var(--ink-primary);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* Toggle Switch */
+.switch-clean {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 22px;
+}
+.switch-clean input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider-clean {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #D6D3CD;
+  transition: .2s;
+  border-radius: 22px;
+}
+.slider-clean:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .2s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+input:checked + .slider-clean {
+  background-color: var(--brand-accent);
+}
+input:checked + .slider-clean:before {
+  transform: translateX(16px);
+}
+
+/* Secondary Button Underline Draw on Hover */
+.landing-secondary-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 20%;
+  width: 60%;
+  height: 1.5px;
+  background-color: var(--brand-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.landing-secondary-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* Accessibility & Performance: prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .living-pulse-line {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
